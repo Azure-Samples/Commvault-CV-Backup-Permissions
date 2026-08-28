@@ -1,0 +1,81 @@
+{
+  "properties": {
+    "roleName": "CV Azure VM Backup Role",
+    "IsCustom": "True",
+    "description": "Role for protecting both encrypted and unencrypted virtual machines.",
+    "assignableScopes": [
+      "/subscriptions/<<Your subscription ID>>"
+    ],
+    "permissions": [
+      {
+        "actions": [
+          "Microsoft.Resources/subscriptions/read",
+          "Microsoft.Compute/availabilitySets/Read",
+          "Microsoft.Compute/locations/*",
+          "Microsoft.Compute/virtualMachines/*",
+          "Microsoft.Compute/Snapshots/*",
+          "Microsoft.Compute/Disks/*",
+          "Microsoft.Network/loadBalancers/read",
+          "Microsoft.Network/locations/*",
+          "Microsoft.Network/networkInterfaces/*",
+          "Microsoft.Network/networkSecurityGroups/join/action",
+          "Microsoft.Network/networkSecurityGroups/read",
+          "Microsoft.Network/networkSecurityGroups/write",
+          "Microsoft.Network/publicIPAddresses/join/action",
+          "Microsoft.Network/publicIPAddresses/read",
+          "Microsoft.Network/publicIPAddresses/write",
+          "Microsoft.Network/virtualNetworks/read",
+          "Microsoft.Network/virtualNetworks/subnets/read",
+          "Microsoft.Network/virtualNetworks/subnets/join/action",
+          "Microsoft.Network/virtualNetworks/write",
+          "Microsoft.ResourceHealth/availabilityStatuses/read",
+          "Microsoft.Resources/deployments/*",
+          "Microsoft.Resources/subscriptions/resourceGroups/read",
+          "Microsoft.Storage/storageAccounts/listKeys/action",
+          "Microsoft.Storage/storageAccounts/*",
+          "Microsoft.Storage/storageAccounts/blobServices/generateUserDelegationKey/action",
+          "Microsoft.Storage/storageAccounts/blobServices/containers/read",
+          "Microsoft.Storage/storageAccounts/blobServices/containers/write",
+          "Microsoft.Compute/proximityPlacementGroups/read",
+          "Microsoft.Compute/proximityPlacementGroups/write",
+          "Microsoft.Compute/proximityPlacementGroups/delete",
+          "Microsoft.Compute/diskEncryptionSets/read",
+          "Microsoft.Compute/restorePointCollections/*",
+          "Microsoft.MarketplaceOrdering/offertypes/publishers/offers/plans/agreements/read",
+          "Microsoft.MarketplaceOrdering/offertypes/publishers/offers/plans/agreements/write",
+          "Microsoft.Network/applicationSecurityGroups/read",
+          "Microsoft.Network/applicationSecurityGroups/joinIpConfiguration/action",
+          "Microsoft.Network/publicIPPrefixes/read",
+          "Microsoft.Network/publicIPPrefixes/join/action",
+          "Microsoft.Network/routeTables/join/action",
+          "Microsoft.Network/ddosProtectionPlans/read",
+          "Microsoft.Network/ddosProtectionPlans/join/action",
+          "Microsoft.Network/ddosProtectionPlans/ddosProtectionPlanProxies/read",
+          "Microsoft.Compute/diskAccesses/*",
+          "Microsoft.KeyVault/vaults/accessPolicies/write",
+          "Microsoft.KeyVault/vaults/read",
+          "Microsoft.KeyVault/vaults/write",
+          "Microsoft.KeyVault/vaults/deploy/action",
+          "Microsoft.KeyVault/checkNameAvailability/read",
+          "Microsoft.KeyVault/operations/read",
+          "Microsoft.KeyVault/vaults/*/read",
+          "Microsoft.ManagedIdentity/userAssignedIdentities/read",
+          "Microsoft.ManagedIdentity/userAssignedIdentities/assign/action"
+        ],
+        "notActions": [],
+        "dataActions": [
+          "Microsoft.KeyVault/vaults/keys/update/action",
+          "Microsoft.KeyVault/vaults/keys/import/action",
+          "Microsoft.KeyVault/vaults/keys/restore/action",
+          "Microsoft.KeyVault/vaults/keys/backup/action",
+          "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/delete",
+          "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/read",
+          "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/write",
+          "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/move/action",
+          "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/add/action"
+        ],
+        "notDataActions": []
+      }
+    ]
+  }
+}
